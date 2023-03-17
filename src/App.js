@@ -12,7 +12,7 @@ function App() {
   async function getCurrentBlockData() {
     // fetch information on the latest block (including transactions)
     const currentBlockRes = await fetch(
-      "https://eth-mainnet.alchemyapi.io/v2/GNauZOAEhjOc34zQQqQuXorOlmC6wJ6W",
+      `https://eth-mainnet.alchemyapi.io/v2/${process.env.REACT_APP_ALCHEMY_API_KEY}`,
       {
         method: "POST",
         headers: {
